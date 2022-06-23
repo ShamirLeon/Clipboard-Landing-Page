@@ -1,0 +1,29 @@
+@use 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: variables.$Font-Bai-Jamjuree;
+    font-size: 18px;
+}
+
+h1,h2{
+    color: variables.$Dark-Grayish-Blue;
+}
+
+p{
+    color: variables.$Grayish-Blue;
+}
+
+.container{
+    padding: 30px;
+
+    @media #{variables.$First-Breakpoint} {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

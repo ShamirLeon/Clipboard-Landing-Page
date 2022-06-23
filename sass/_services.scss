@@ -1,0 +1,106 @@
+@use 'variables';
+
+.services{
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+        
+        &--one{
+            margin-bottom: 10rem;
+        }
+
+        @media #{variables.$First-Breakpoint}{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    h2, p{
+        text-align: center;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    &__texts{
+        margin-bottom: 3rem;
+        @media #{variables.$First-Breakpoint}{
+            width: 100%;
+        }
+    }
+
+    &__main{
+        display: grid;
+        position: relative;
+        margin-bottom: 3rem;
+        @media #{variables.$First-Breakpoint}{
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+        }
+
+        h2,p{
+            @media #{variables.$First-Breakpoint}{
+                width: 100%;
+                text-align: left;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__img{
+        width: 90vw;
+        margin-bottom: 3rem;
+        
+        &--pc{
+
+            @media #{variables.$First-Breakpoint}{
+                width: 80%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                transform: translateX(-25vw);
+            }
+        }
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            margin-bottom: 3em;
+        }
+    }
+
+    &__item{
+        display: grid;
+        grid-auto-rows: max-content;
+
+        &-container{
+            @media #{variables.$First-Breakpoint} {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: flex-start;
+                gap: 2rem;
+            }
+
+            h2,p{
+                @media #{variables.$First-Breakpoint} {
+                    font-size: 14px;
+                }
+            }
+        }
+            
+
+    }
+
+    &__icon{
+        justify-self: center;
+        margin-bottom: 2rem;
+    }
+
+}
+
